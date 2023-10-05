@@ -1,5 +1,5 @@
-# k3s-hello-world
-A simple hello world application for testing that applications will be accessible on a k3s cluster. 
+# hello-world
+A simple hello world application for testing that applications will be accessible on a Kubernetes cluster. 
 
 # Getting Started
 
@@ -11,12 +11,3 @@ docker pull klutzer/hello-world:latest
 docker run -p 80:80 klutzer/hello-world:latest
 curl http://localhost:80 # will print "Hello World"
 ```
-
-To run the application in your k3s cluster, run: 
-
-```bash
-kubectl apply -f deployment.yml
-```
-
-It will take a few seconds to pull the container. Dependant on the internet connection your cluster has and the total amount of RAM the nodes have, you might see a 
-`ErrPullImage` status, but eventually the image will be pulled and run.
